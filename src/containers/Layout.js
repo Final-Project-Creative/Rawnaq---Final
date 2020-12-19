@@ -15,6 +15,7 @@ import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
 import { fetchCart } from "../store/actions/cart";
 
+
 class CustomLayout extends React.Component {
   componentDidMount() {
     this.props.fetchCart();
@@ -27,19 +28,19 @@ class CustomLayout extends React.Component {
         <Menu inverted style={{ backgroundColor: '#00b5ad', height: '70px' }}>
           <Container >
             <Link to="/">
-              <Image src="../media/logo.png" style={{margin:'10px'}}></Image>
+              <Image src="../media/scarf.jpg" style={{ margin: '10px' }}></Image>
             </Link>
             <Link to="/">
-              <Menu.Item header style={{margin:'10px'}}>RAWNAQ</Menu.Item>
+              <Menu.Item header style={{ margin: '10px' }}>RAWNAQ</Menu.Item>
             </Link>
             <Link to="/products">
-              <Menu.Item header style={{margin:'10px'}}>Products</Menu.Item>
+              <Menu.Item header style={{ margin: '10px' }}>Products</Menu.Item>
             </Link>
             {authenticated ? (
               <React.Fragment>
                 <Menu.Menu position="right">
                   <Link to="/profile">
-                    <Menu.Item style={{margin:'10px'}}>Profile</Menu.Item>
+                    <Menu.Item style={{ margin: '10px' }}>Profile</Menu.Item>
                   </Link>
                   <Dropdown
                     icon="cart"
@@ -72,25 +73,25 @@ class CustomLayout extends React.Component {
                           />
                         </React.Fragment>
                       ) : (
-                        <Dropdown.Item>No items in your cart</Dropdown.Item>
-                      )}
+                          <Dropdown.Item>No items in your cart</Dropdown.Item>
+                        )}
                     </Dropdown.Menu>
                   </Dropdown>
-                  <Menu.Item header onClick={() => this.props.logout()} style={{margin:'10px'}}>
+                  <Menu.Item header onClick={() => this.props.logout()} style={{ margin: '10px' }}>
                     Logout
                   </Menu.Item>
                 </Menu.Menu>
               </React.Fragment>
             ) : (
-              <Menu.Menu position="right">
-                <Link to="/login">
-                  <Menu.Item header style={{margin:'10px'}}>Signin</Menu.Item>
-                </Link>
-                <Link to="/signup">
-                  <Menu.Item header style={{margin:'10px'}}>Signup</Menu.Item>
-                </Link>
-              </Menu.Menu>
-            )}
+                <Menu.Menu position="right">
+                  <Link to="/login">
+                    <Menu.Item header style={{ margin: '10px' }}>Signin</Menu.Item>
+                  </Link>
+                  <Link to="/signup">
+                    <Menu.Item header style={{ margin: '10px' }}>Signup</Menu.Item>
+                  </Link>
+                </Menu.Menu>
+              )}
           </Container>
         </Menu>
 
