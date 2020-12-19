@@ -10,9 +10,9 @@ WSGI_APPLICATION = 'home.wsgi.dev.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop',
+        'NAME': 'shop4',
         'USER': 'root',
-        'PASSWORD': 'rasha',
+        'PASSWORD': 'imad12345*',
         'PORT': '3306',
         'HOST': 'localhost',
     }
@@ -24,5 +24,5 @@ CORS_ORIGIN_WHITELIST = (
 
 # Stripe
 
-STRIPE_PUBLIC_KEY = config('STRIPE_TEST_PUBLIC_KEY')
-STRIPE_SECRET_KEY = config('STRIPE_TEST_SECRET_KEY')
+STRIPE_PUBLIC_KEY = 'pk_test_TYooMQauvdEDq54NiTphI7jx'
+STRIPE_SECRET_KEY = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'
