@@ -55,6 +55,8 @@ class ProductDetail extends React.Component {
       .get(productDetailURL(params.productID))
       .then(res => {
         this.setState({ data: res.data, loading: false });
+        console.log(res.data)
+
       })
       .catch(err => {
         this.setState({ error: err, loading: false });
@@ -91,7 +93,6 @@ class ProductDetail extends React.Component {
     };
     this.setState({ formData: updatedFormData });
   };
-
   render() {
     const { data, error, formData, formVisible, loading } = this.state;
     const item = data;
