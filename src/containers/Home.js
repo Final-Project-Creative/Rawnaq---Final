@@ -21,20 +21,32 @@ const properties = {
 const HomepageLayout = () => {
   return (
     <div className="slide-container">
-    <Slide {...properties}>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
-            </div>
+      <Slide {...properties}>
+        <div className="each-slide">
+          <div style={{ 'backgroundImage': `url(${slideImages[0]})` }}>
           </div>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
-            </div>
+        </div>
+        <div className="each-slide">
+          <div style={{ 'backgroundImage': `url(${slideImages[1]})` }}>
           </div>
-          <div className="each-slide">
-            <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
-            </div>
+        </div>
+        <div className="each-slide">
+          <div style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
           </div>
+<<<<<<< HEAD
         </Slide>
+=======
+        </div>
+      </Slide>
+
+      {/* <Zoom {...zoomInProperties}>
+        {images.map((each, index) => (
+          <div key={index} style={{width: "100hv"}}>
+            <img style={{ objectFit: "cover", width: "100hv" }} src={each} />
+          </div>
+        ))}
+      </Zoom> */}
+>>>>>>> 4d63a0dd89cc881d2eaeefde40ae195cc26bc8bb
     </div>
   )
 }

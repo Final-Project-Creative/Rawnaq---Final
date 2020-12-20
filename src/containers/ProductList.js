@@ -55,7 +55,7 @@ class ProductList extends React.Component {
           <Message
             error
             header="There was some errors with your submission"
-            content={JSON.stringify(error)}
+          //content={JSON.stringify(error)}
           />
         )}
         {loading && (
@@ -102,8 +102,8 @@ class ProductList extends React.Component {
                           item.label === "primary"
                             ? "blue"
                             : item.label === "secondary"
-                            ? "green"
-                            : "olive"
+                              ? "blue"
+                              : "blue"
                         }
                       >
                         {item.label}
