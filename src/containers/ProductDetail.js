@@ -98,8 +98,8 @@ class ProductDetail extends React.Component {
         {error && (
           <Message
             error
-            header="There was some errors with your submission"
-            content={JSON.stringify(error)}
+            header="You have to login First"
+          //content={JSON.stringify(error)}
           />
         )}
         {loading && (
@@ -120,14 +120,15 @@ class ProductDetail extends React.Component {
                 meta={
                   <React.Fragment>
                     {item.category}
+                    <br></br>
                     {item.discount_price && (
                       <Label
                         color={
                           item.label === "primary"
                             ? "blue"
                             : item.label === "secondary"
-                            ? "green"
-                            : "olive"
+                              ? "blue"
+                              : "blue"
                         }
                       >
                         {item.label}
@@ -140,7 +141,7 @@ class ProductDetail extends React.Component {
                   <React.Fragment>
                     <Button
                       fluid
-                      color="yellow"
+                      color="blue"
                       floated="right"
                       icon
                       labelPosition="right"

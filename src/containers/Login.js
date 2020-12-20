@@ -33,6 +33,11 @@ class LoginForm extends React.Component {
     if (token) {
       return <Redirect to="/" />;
     }
+
+    if (error) {
+      document.getElementById("matchPass1").innerHTML = "<div class='alert alert-warning' role='alert'> Error input data</div>"
+
+    }
     return (
       <Grid
         textAlign="center"
@@ -79,6 +84,7 @@ class LoginForm extends React.Component {
                 </Button>
               </Segment>
             </Form>
+            <h3 id="matchPass1"></h3>
             <Message>
               New to us? <NavLink to="/signup">Sign Up</NavLink>
             </Message>
