@@ -15,7 +15,7 @@ import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 
-class mProductList extends React.Component {
+class aProductList extends React.Component {
     state = {
         loading: false,
         error: null,
@@ -29,7 +29,7 @@ class mProductList extends React.Component {
             .then(res => {
                 this.setState({
                     data: res.data.filter((data) =>
-                        data.category === 'Men')
+                        data.category === 'Accessories')
 
                     , loading: false
                 });
@@ -137,4 +137,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
     null,
     mapDispatchToProps
-)(mProductList);
+)(aProductList);
