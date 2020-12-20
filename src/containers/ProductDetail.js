@@ -23,6 +23,8 @@ import {
 import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
 
 class ProductDetail extends React.Component {
   state = {
@@ -93,6 +95,12 @@ class ProductDetail extends React.Component {
   render() {
     const { data, error, formData, formVisible, loading } = this.state;
     const item = data;
+    const properties = {
+      duration: 4444,
+      transitionDuration: 1111,
+      indicators: true,
+      arrows: true
+  };
     return (
       <Container>
         {error && (
@@ -115,7 +123,22 @@ class ProductDetail extends React.Component {
             <Grid.Column>
               <Card
                 fluid
-                image={item.image}
+                // image={item.image}
+                image={
+                  <div>
+                    <Slide {...properties} >
+                      <div className="each-slide">
+                        <Item.Image src={item.image} />
+                      </div>
+                      <div className="each-slide">
+                        <Item.Image src= {item.image1} />
+                      </div>
+                      <div className="each-slide">
+                        <Item.Image src= {item.image2} />
+                      </div>
+                    </Slide>
+                  </div> 
+                }
                 header={item.title}
                 meta={
                   <React.Fragment>
