@@ -352,7 +352,8 @@ const InjectedForm = withRouter(injectStripe(CheckoutForm));
 
 const WrappedForm = () => (
   <Container text>
-    <StripeProvider apiKey="">
+    <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+      {/* <StripeProvider stripe={this.state.stripe}> */}
       <div>
         <h1>Complete your order</h1>
         <Elements>
