@@ -24,7 +24,11 @@ import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
+<<<<<<< HEAD
 import 'react-slideshow-image/dist/styles.css'
+=======
+import 'react-slideshow-image/dist/styles.css';
+>>>>>>> 754b8ff3083d5bcf71e50ba8ab6133f0c1067c73
 
 class ProductDetail extends React.Component {
   state = {
@@ -101,7 +105,11 @@ class ProductDetail extends React.Component {
       transitionDuration: 1111,
       indicators: true,
       arrows: true
+<<<<<<< HEAD
   };
+=======
+    };
+>>>>>>> 754b8ff3083d5bcf71e50ba8ab6133f0c1067c73
     return (
       <Container>
         {error && (
@@ -124,7 +132,10 @@ class ProductDetail extends React.Component {
             <Grid.Column>
               <Card
                 fluid
+<<<<<<< HEAD
                 // image={item.image}
+=======
+>>>>>>> 754b8ff3083d5bcf71e50ba8ab6133f0c1067c73
                 image={
                   <div>
                     <Slide {...properties} >
@@ -132,6 +143,7 @@ class ProductDetail extends React.Component {
                         <Item.Image src={item.image} />
                       </div>
                       <div className="each-slide">
+<<<<<<< HEAD
                         <Item.Image src= {item.image1} />
                       </div>
                       <div className="each-slide">
@@ -139,6 +151,15 @@ class ProductDetail extends React.Component {
                       </div>
                     </Slide>
                   </div> 
+=======
+                        <Item.Image src={item.image1} />
+                      </div>
+                      <div className="each-slide">
+                        <Item.Image src={item.image2} />
+                      </div>
+                    </Slide>
+                  </div>
+>>>>>>> 754b8ff3083d5bcf71e50ba8ab6133f0c1067c73
                 }
                 header={item.title}
                 meta={
