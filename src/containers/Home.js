@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
@@ -36,13 +38,12 @@ const HomepageLayout = () => {
           <div style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
           </div>
         </div>
-
       </Slide>
 
       {/* <Zoom {...zoomInProperties}>
         {images.map((each, index) => (
           <div key={index} style={{width: "100hv"}}>
-            <img style={{ objectFit: "cover", width: "100hv" }} src={each} />
+            <img style={{ objectFit: "cover", width: "100hv" }} src={each} />//
           </div>
         ))}
       </Zoom> */}
@@ -102,10 +103,6 @@ const HomepageLayout = () => {
 
 
     </div >
-
-
-        </Slide>
-    </div>
 
   )
 }
