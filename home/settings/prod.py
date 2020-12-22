@@ -10,12 +10,11 @@ WSGI_APPLICATION = 'home.wsgi.prod.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop4',
-        'USER': 'root',
-        'PASSWORD': 'imad12345*',
+        'NAME': '4Tj5slbYk9',
+        'USER': '4Tj5slbYk9',
+        'PASSWORD': 'cTBVuQeJzX',
         'PORT': '3306',
-        'HOST': 'localhost',
-
+        'HOST': 'remotemysql.com',
     }
 }
 
