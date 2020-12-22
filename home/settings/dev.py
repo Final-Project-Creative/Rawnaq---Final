@@ -2,7 +2,8 @@
 
 from .base import *
 
-ALLOWED_HOSTS += ['127.0.0.1']
+# ALLOWED_HOSTS += ['127.0.0.1']
+ALLOWED_HOSTS = ['198.211.99.20', 'localhost', '127.0.0.1']
 DEBUG = True
 
 WSGI_APPLICATION = 'home.wsgi.dev.application'
@@ -10,7 +11,7 @@ WSGI_APPLICATION = 'home.wsgi.dev.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop1',
+        'NAME': 'shop2',
         'USER': 'root',
         'PASSWORD': '',
         'PORT': '3306',
