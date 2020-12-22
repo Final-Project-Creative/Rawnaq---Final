@@ -52,7 +52,7 @@ const HomepageLayout = () => {
           <div className='menu-item'>
             <div className='content'>
               <h1 className='title'>WOMEN</h1>
-              <Link className='background-image' to="/products">
+              <Link className='background-image' to="/womenproducts">
                 <img className='background-image' src='https://image.made-in-china.com/2f0j00oOStnyLzMgcF/Modern-Fashion-Elegant-Women-Clothes.jpg'></img>
               </Link>
               <span className='subtitle'>Shop Now</span>
@@ -63,7 +63,7 @@ const HomepageLayout = () => {
           <div className='menu-item'>
             <div className='content'>
               <h1 className='title'>MEN</h1>
-              <Link className='background-image' to="/mproducts">
+              <Link className='background-image' to="/menproducts">
                 <img className='background-image' src='https://cf.shopee.ph/file/1a4c08a2503d9ada5307c116673328ab'></img>
               </Link>
               <span className='subtitle'>Shop Now</span>
@@ -74,7 +74,7 @@ const HomepageLayout = () => {
           <div className='menu-item'>
             <div className='content'>
               <h1 className='title'>CHILDREN</h1>
-              <Link className='background-image' to="/cproducts">
+              <Link className='background-image' to="/childproducts">
                 <img className='background-image' src='https://previews.123rf.com/images/olgagi/olgagi1904/olgagi190400207/121197640-collage-set-of-children-clothes-denim-jacket-and-pants-shoes-and-rain-jacket-for-child-boy-isolated-.jpg'></img>
               </Link>
               <span className='subtitle'>Shop Now</span>
@@ -85,7 +85,7 @@ const HomepageLayout = () => {
           <div className='menu-item'>
             <div className='content'>
               <h1 className='title'>accessory</h1>
-              <Link className='background-image' to="/aproducts">
+              <Link className='background-image' to="/accproducts">
                 <img className='background-image' src='https://image.shutterstock.com/image-photo/fashion-women-stylish-accessories-outfit-260nw-1532053424.jpg'></img>
               </Link>
               <span className='subtitle'>Shop Now</span>

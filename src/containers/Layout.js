@@ -28,7 +28,8 @@ class CustomLayout extends React.Component {
         <Menu inverted style={{ backgroundColor: '#00b5ad', height: '70px' }}>
           <Container >
             <Link to="/">
-              <Image src="../media/scarf.jpg" style={{ margin: '10px' }}></Image>
+              <Image src="https://www.w3schools.com/images/w3schools_gn.jpg" style={{ margin: '10px' }}></Image>
+              {/* <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com" style={{ "width:104px;height:142px; margin: '10px'}}"></img> */}
             </Link>
             <Link to="/">
               <Menu.Item header style={{ margin: '10px' }}>RAWNAQ</Menu.Item>

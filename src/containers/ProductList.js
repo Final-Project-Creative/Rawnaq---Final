@@ -34,6 +34,7 @@ class ProductList extends React.Component {
 
           , loading: false
         });
+        console.log(res.data)
       })
       .catch(err => {
         this.setState({ error: err, loading: false });

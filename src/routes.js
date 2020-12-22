@@ -17,10 +17,10 @@ import Profile from "./containers/Profile";
 
 const BaseRouter = () => (
   <Hoc>
-    <Route exact path="/products" component={ProductList} />
-    <Route exact path="/mproducts" component={mProductList} />
-    <Route exact path="/cproducts" component={cProductList} />
-    <Route exact path="/aproducts" component={aProductList} />
+    <Route exact path="/womenproducts" component={ProductList} />
+    <Route exact path="/menproducts" component={mProductList} />
+    <Route exact path="/childproducts" component={cProductList} />
+    <Route exact path="/accproducts" component={aProductList} />
 
     <Route path="/products/:productID" component={ProductDetail} />
     <Route path="/login" component={Login} />
