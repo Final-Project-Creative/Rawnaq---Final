@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
@@ -38,6 +36,7 @@ const HomepageLayout = () => {
           <div style={{ 'backgroundImage': `url(${slideImages[2]})` }}>
           </div>
         </div>
+
       </Slide>
 
       {/* <Zoom {...zoomInProperties}>
@@ -103,6 +102,10 @@ const HomepageLayout = () => {
 
 
     </div >
+
+
+        </Slide>
+    </div>
 
   )
 }
