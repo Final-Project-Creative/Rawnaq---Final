@@ -9,9 +9,9 @@ WSGI_APPLICATION = 'home.wsgi.prod.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop4',
+        'NAME': 'shop',
         'USER': 'root',
-        'PASSWORD': 'imad12345*',
+        'PASSWORD': 'rasha',
         'PORT': '3306',
         'HOST': 'localhost',
     }
