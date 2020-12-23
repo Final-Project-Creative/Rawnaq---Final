@@ -124,7 +124,6 @@ class ProductDetail extends React.Component {
             <Grid.Column>
               <Card
                 fluid
-                // image={item.image}
                 image={
                   <div>
                     <Slide {...properties} >
@@ -132,6 +131,13 @@ class ProductDetail extends React.Component {
                         <Item.Image src={item.image} />
                       </div>
                       <div className="each-slide">
+                        <Item.Image src={item.image1} />
+                      </div>
+                      <div className="each-slide">
+                        <Item.Image src={item.image2} />
+                      </div>
+                    </Slide>
+                  </div>
                         <Item.Image src= {item.image1} />
                       </div>
                       <div className="each-slide">
@@ -236,9 +242,9 @@ class ProductDetail extends React.Component {
                   );
                 })}
             </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+          </Grid.Row >
+        </Grid >
+      </Container >
     );
   }
 }

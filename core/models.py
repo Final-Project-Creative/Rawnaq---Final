@@ -50,7 +50,6 @@ class Item(models.Model):
     image1 = models.ImageField(default= "01.png")
     image2 = models.ImageField(default= "01.png")
 
-    
 
     def __str__(self):
         return self.title
