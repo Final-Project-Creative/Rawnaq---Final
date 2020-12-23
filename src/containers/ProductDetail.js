@@ -101,7 +101,7 @@ class ProductDetail extends React.Component {
       transitionDuration: 1111,
       indicators: true,
       arrows: true
-  };
+    };
     return (
       <Container>
         {error && (
@@ -138,13 +138,6 @@ class ProductDetail extends React.Component {
                       </div>
                     </Slide>
                   </div>
-                        <Item.Image src= {item.image1} />
-                      </div>
-                      <div className="each-slide">
-                        <Item.Image src= {item.image2} />
-                      </div>
-                    </Slide>
-                  </div> 
                 }
                 header={item.title}
                 meta={
