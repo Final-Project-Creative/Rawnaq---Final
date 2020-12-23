@@ -4,6 +4,17 @@
     gap: 10px;
   }
 
+
+.cinema{
+  text-decoration: line-through
+}
+
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
+}
+
   .each-slide > div {
     display: flex;
     align-items: center;
@@ -18,3 +29,4 @@
   
 
   
+
