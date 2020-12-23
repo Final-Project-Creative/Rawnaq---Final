@@ -11,5 +11,10 @@
     background-size: cover;
     height: 100vh;
   }
+  
+  slide-container {
+    width: 70%;
+    margin: auto; }
+  
 
   
