@@ -4,8 +4,8 @@ from django.db import models
 from django.db.models import Sum
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
-
-
+# import cloudinary
+# from cloudinary.forms import CloudinaryJsFileField
 CATEGORY_CHOICES = (
     ('Child', 'Child'),
     ('Men', 'Men'),

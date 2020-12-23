@@ -11,11 +11,11 @@ WSGI_APPLICATION = 'home.wsgi.dev.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': '4Tj5slbYk9',
-        'USER': '4Tj5slbYk9',
-        'PASSWORD': 'cTBVuQeJzX',
-        'PORT': '3306',
-        'HOST': 'remotemysql.com',
+        'NAME': 'defaultdb',
+        'USER': 'doadmin',
+        'PASSWORD': 'ed52filmusx8wvzz',
+        'PORT': '25060',
+        'HOST': 'db-mysql-fra1-32089-do-user-8329960-0.b.db.ondigitalocean.com',
     }
 }
 

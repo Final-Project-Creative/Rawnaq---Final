@@ -25,9 +25,22 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
-
+    # 'uploads.apps.UploadsConfig',
+    'cloudinary-storage',
+    'cloudinary',
     'core'
 ]
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'imad2514',
+    'API_KEY': '988173984452773',
+    'API_SECRET': '7oyOxT3qv1tmtFh8g77vVjk4mXM',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
