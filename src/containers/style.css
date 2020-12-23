@@ -5,11 +5,23 @@
   }
 
 .cinema{
-  text-decoration: line-through
+  text-decoration: line-through;
+  font-weight: bold;
 }
 
-.oneitem{
-  box-sizing: border-box;
-    /* border: inset !important; */
-    
+.cinema2{
+  font-size: large;
+  font-weight: bold;
 }
+
+/* .each-slide1{
+  width: 20%; 
+  height: 20%;
+
+}
+
+.imgg{
+  width: 20%; 
+  height: 20%;
+
+} */

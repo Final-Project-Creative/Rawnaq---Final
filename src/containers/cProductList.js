@@ -110,9 +110,9 @@ class cProductList extends React.Component {
                     </Typography>
                     <Typography variant="body2" color="black" component="p">
 
-                      ${item.price}   ${item.discount_price}
+                      <span className="cinema"> ${item.price}</span>   <span className="cinema2">${item.discount_price}</span>
                       <br></br>
-                      {item.description}
+                      {item.label}
 
                     </Typography>
                   </CardContent>
