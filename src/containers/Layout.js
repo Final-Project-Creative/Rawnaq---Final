@@ -26,7 +26,7 @@ class CustomLayout extends React.Component {
     return (
       <div>
         <Menu inverted style={{ backgroundColor: '#6b5b95', height: '85px' }}>
-          <Container >
+          <Container style={{ padding: 0, margin: 0 }} >
             <Link to="/">
 
               <Image src="https://res.cloudinary.com/imad2514/image/upload/v1608717062/img/logo_ledfkm.png" style={{ height: '85px', width: '100px' }}></Image>

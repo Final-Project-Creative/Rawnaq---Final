@@ -1,19 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-    Container,
-    Dimmer,
-    Image,
-    Item,
-    Label,
-    Loader,
-    Message,
-    Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+import "./style.css"
+
 
 class mProductList extends React.Component {
     state = {
@@ -75,26 +68,26 @@ class mProductList extends React.Component {
                         <Image src="/images/wireframe/short-paragraph.png" />
                     </Segment>
                 )}
-                    <Item.Group className='wrapper'>
-                        {data.map(item => {
-                            return (
-                                <Item key={item.id}>
-                                    <Item.Image src={item.image} />
-                                    <Item.Content>
-                                        <Item.Header
-                                            as="a"
-                                            onClick={() =>
-                                                this.props.history.push(`/products/${item.id}`)
-                                            }
-                                        >
-                                            {item.title}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            <span className="cinema">{item.category}</span>
-                                        </Item.Meta>
-                                        <Item.Description>{item.description}</Item.Description>
-                                        <Item.Extra>
-                                            {/* <Button
+                <Item.Group className='wrapper'>
+                    {data.map(item => {
+                        return (
+                            <Item key={item.id}>
+                                <Item.Image src={item.image} />
+                                <Item.Content>
+                                    <Item.Header
+                                        as="a"
+                                        onClick={() =>
+                                            this.props.history.push(`/products/${item.id}`)
+                                        }
+                                    >
+                                        {item.title}
+                                    </Item.Header>
+                                    <Item.Meta>
+                                        <span className="cinema">{item.category}</span>
+                                    </Item.Meta>
+                                    <Item.Description>{item.description}</Item.Description>
+                                    <Item.Extra>
+                                        {/* <Button
                       primary
                       floated="right"
                       icon
@@ -104,25 +97,25 @@ class mProductList extends React.Component {
                       Add to cart
                       <Icon name="cart plus" />
                     </Button> */}
-                                            {item.discount_price && (
-                                                <Label
-                                                    color={
-                                                        item.label === "primary"
+                                        {item.discount_price && (
+                                            <Label
+                                                color={
+                                                    item.label === "primary"
+                                                        ? "blue"
+                                                        : item.label === "secondary"
                                                             ? "blue"
-                                                            : item.label === "secondary"
-                                                                ? "blue"
-                                                                : "blue"
-                                                    }
-                                                >
-                                                    {item.label}
-                                                </Label>
-                                            )}
-                                        </Item.Extra>
-                                    </Item.Content>
-                                </Item>
-                            );
-                        })}
-                    </Item.Group>
+                                                            : "blue"
+                                                }
+                                            >
+                                                {item.label}
+                                            </Label>
+                                        )}
+                                    </Item.Extra>
+                                </Item.Content>
+                            </Item>
+                        );
+                    })}
+                </Item.Group>
             </Container>
         );
     }

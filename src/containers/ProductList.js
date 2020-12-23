@@ -1,20 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-///asd
-import {
-  Container,
-  Dimmer,
-  Image,
-  Item,
-  Label,
-  Loader,
-  Message,
-  Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+import "./style.css"
 
 class ProductList extends React.Component {
   state = {
