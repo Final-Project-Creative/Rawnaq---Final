@@ -37,13 +37,6 @@ const HomepageLayout = () => {
           </div>
         </div>
       </Slide>
-      {/* <Zoom {...zoomInProperties}>
-        {images.map((each, index) => (
-          <div key={index} style={{width: "100hv"}}>
-            <img style={{ objectFit: "cover", width: "100hv" }} src={each} />//
-          </div>
-        ))}
-      </Zoom> */}
       <div className='homepage'>
         <div className='directory-menu'>
           <div className='menu-item'>
@@ -99,5 +92,4 @@ const HomepageLayout = () => {
   )
 }
 export default HomepageLayout;
-
 

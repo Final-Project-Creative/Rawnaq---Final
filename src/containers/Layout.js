@@ -29,7 +29,7 @@ class CustomLayout extends React.Component {
           <Container >
             <Link to="/">
 
-              <Image src="http://127.0.0.1:8000/media/logo.png" style={{ height: '85px', width: '100px' }}></Image>
+              <Image src="https://res.cloudinary.com/imad2514/image/upload/v1608717062/img/logo_ledfkm.png" style={{ height: '85px', width: '100px' }}></Image>
 
             </Link>
             <Link to="/">

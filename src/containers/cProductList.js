@@ -14,6 +14,7 @@ import {
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+import "./style.css"
 
 class cProductList extends React.Component {
   state = {
@@ -78,7 +79,7 @@ class cProductList extends React.Component {
             <Image src="/images/wireframe/short-paragraph.png" />
           </Segment>
         )}
-        <Item.Group divided>
+        <Item.Group className='wrapper'>
           {data.map(item => {
             return (
               <Item key={item.id}>

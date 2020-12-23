@@ -75,7 +75,7 @@ class aProductList extends React.Component {
                         <Image src="/images/wireframe/short-paragraph.png" />
                     </Segment>
                 )}
-                <Item.Group divided>
+                <Item.Group className='wrapper'>
                     {data.map(item => {
                         return (
                             <Item key={item.id}>
