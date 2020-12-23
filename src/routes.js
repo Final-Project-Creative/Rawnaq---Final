@@ -7,6 +7,8 @@ import Signup from "./containers/Signup";
 import HomepageLayout from "./containers/Home";
 import ProductList from "./containers/ProductList";
 import mProductList from "./containers/mProductList";
+import cProductList from "./containers/cProductList";
+import aProductList from "./containers/aProductList";
 
 import ProductDetail from "./containers/ProductDetail";
 import OrderSummary from "./containers/OrderSummary";
@@ -17,6 +19,8 @@ const BaseRouter = () => (
   <Hoc>
     <Route exact path="/products" component={ProductList} />
     <Route exact path="/mproducts" component={mProductList} />
+    <Route exact path="/cproducts" component={cProductList} />
+    <Route exact path="/aproducts" component={aProductList} />
 
     <Route path="/products/:productID" component={ProductDetail} />
     <Route path="/login" component={Login} />

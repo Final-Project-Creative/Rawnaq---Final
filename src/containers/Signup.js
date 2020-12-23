@@ -106,7 +106,7 @@ class RegistrationForm extends React.Component {
                 </Button>
               </Segment>
             </Form>
-            <h3 id="matchPass"></h3>
+            <h4 id="matchPass"></h4>
             <Message>
               Already have an account? <NavLink to="/login">Login</NavLink>
             </Message>
