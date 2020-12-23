@@ -4,24 +4,34 @@
     gap: 10px;
   }
 
+
 .cinema{
   text-decoration: line-through;
   font-weight: bold;
 }
+
 
 .cinema2{
   font-size: large;
   font-weight: bold;
 }
 
-/* .each-slide1{
-  width: 20%; 
-  height: 20%;
 
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
 }
 
-.imgg{
-  width: 20%; 
-  height: 20%;
-
-} */
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  slide-container {
+    width: 70%;
+    margin: auto; }
+  
