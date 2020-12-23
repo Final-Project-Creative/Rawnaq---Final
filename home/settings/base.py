@@ -26,18 +26,11 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     # 'uploads.apps.UploadsConfig',
-    'cloudinary-storage',
+    'cloudinary_storage',
     'cloudinary',
+    # 'media',
     'core'
 ]
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': 'imad2514',
-    'API_KEY': '988173984452773',
-    'API_SECRET': '7oyOxT3qv1tmtFh8g77vVjk4mXM',
-}
-
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 
 
 
@@ -77,9 +70,22 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
+ 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'imad2514',
+    'API_KEY': '988173984452773',
+    'API_SECRET': '7oyOxT3qv1tmtFh8g77vVjk4mXM',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

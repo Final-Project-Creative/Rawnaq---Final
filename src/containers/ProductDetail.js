@@ -24,7 +24,7 @@ import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import 'react-slideshow-image/dist/styles.css'
 
 class ProductDetail extends React.Component {
   state = {
