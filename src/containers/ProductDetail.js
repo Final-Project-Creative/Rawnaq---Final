@@ -24,7 +24,7 @@ import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import 'react-slideshow-image/dist/styles.css'
 
 class ProductDetail extends React.Component {
   state = {
@@ -55,6 +55,8 @@ class ProductDetail extends React.Component {
       .get(productDetailURL(params.productID))
       .then(res => {
         this.setState({ data: res.data, loading: false });
+        console.log(res.data)
+
       })
       .catch(err => {
         this.setState({ error: err, loading: false });
@@ -91,7 +93,6 @@ class ProductDetail extends React.Component {
     };
     this.setState({ formData: updatedFormData });
   };
-
   render() {
     const { data, error, formData, formVisible, loading } = this.state;
     const item = data;
@@ -234,9 +235,9 @@ class ProductDetail extends React.Component {
                   );
                 })}
             </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+          </Grid.Row >
+        </Grid >
+      </Container >
     );
   }
 }
