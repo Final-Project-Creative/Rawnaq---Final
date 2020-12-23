@@ -4,6 +4,7 @@ from .base import *
 
 DEBUG = False
 ALLOWED_HOSTS += ['http://domain.com']
+# ALLOWED_HOSTS += ['127.0.0.1']
 WSGI_APPLICATION = 'home.wsgi.prod.application'
 
 DATABASES = {
