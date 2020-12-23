@@ -9,11 +9,11 @@ WSGI_APPLICATION = 'home.wsgi.prod.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shop',
-        'USER': 'root',
-        'PASSWORD': 'rasha',
-        'PORT': '3306',
-        'HOST': 'localhost',
+        'NAME': 'defaultdb',
+        'USER': 'doadmin',
+        'PASSWORD': 'ed52filmusx8wvzz',
+        'PORT': '25060',
+        'HOST': 'db-mysql-fra1-32089-do-user-8329960-0.b.db.ondigitalocean.com',
     }
 }
 
