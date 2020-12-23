@@ -251,7 +251,7 @@ class AddressForm extends React.Component {
           // content={JSON.stringify(error)}
           />
         )}
-        <Form.Button disabled={saving} loading={saving} primary>
+        <Form.Button disabled={saving} loading={saving} >
           Save
         </Form.Button>
       </Form>
@@ -371,11 +371,11 @@ class Profile extends React.Component {
             return (
               <Card key={a.id}>
                 <Card.Content>
-                  {a.default && (
-                    <Label as="a" color="blue" ribbon="right">
-                      Default
+                  {/* {a.default && (
+                    <Label as="a" color="purple" ribbon="right">
+
                     </Label>
-                  )}
+                  )} */}
                   <Card.Header>
                     {a.street_address}, {a.apartment_address}
                   </Card.Header>
@@ -384,13 +384,13 @@ class Profile extends React.Component {
                 </Card.Content>
                 <Card.Content extra>
                   <Button
-                    color="yellow"
+                    color="purple"
                     onClick={() => this.handleSelectAddress(a)}
                   >
                     Update
                   </Button>
                   <Button
-                    color="red"
+                    color="#6b5b95"
                     onClick={() => this.handleDeleteAddress(a.id)}
                   >
                     Delete
@@ -454,11 +454,11 @@ class Profile extends React.Component {
         <Grid.Row>
           <Grid.Column width={6}>
             <Menu pointing vertical fluid>
-              <Menu.Item
+              {/* <Menu.Item
                 name="Billing Address"
                 active={activeItem === "billingAddress"}
                 onClick={() => this.handleItemClick("billingAddress")}
-              />
+              /> */}
               <Menu.Item
                 name="Shipping Address"
                 active={activeItem === "shippingAddress"}

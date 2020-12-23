@@ -3,3 +3,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+
+.cinema{
+  text-decoration: line-through
+}
+
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
+}
