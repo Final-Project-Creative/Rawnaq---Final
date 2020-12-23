@@ -24,7 +24,7 @@ import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import 'react-slideshow-image/dist/styles.css'
 
 class ProductDetail extends React.Component {
   state = {
@@ -101,7 +101,7 @@ class ProductDetail extends React.Component {
       transitionDuration: 1111,
       indicators: true,
       arrows: true
-    };
+  };
     return (
       <Container>
         {error && (
@@ -138,6 +138,13 @@ class ProductDetail extends React.Component {
                       </div>
                     </Slide>
                   </div>
+                        <Item.Image src= {item.image1} />
+                      </div>
+                      <div className="each-slide">
+                        <Item.Image src= {item.image2} />
+                      </div>
+                    </Slide>
+                  </div> 
                 }
                 header={item.title}
                 meta={
