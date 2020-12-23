@@ -15,9 +15,10 @@ import string
 import stripe
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-# class HomeView(ListView):
-#     model = Item
-#     template_name = "home.html"
+class HomeView(ListView):
+    model = Item
+    template_name = "home.html"
+
 
 
 def create_ref_code():
