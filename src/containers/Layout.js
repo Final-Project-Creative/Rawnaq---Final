@@ -20,7 +20,6 @@ class CustomLayout extends React.Component {
   componentDidMount() {
     this.props.fetchCart();
   }
-
   render() {
     const { authenticated, cart, loading } = this.props;
     return (
