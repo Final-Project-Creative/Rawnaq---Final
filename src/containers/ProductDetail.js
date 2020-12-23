@@ -2,29 +2,13 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-  Button,
-  Card,
-  Container,
-  Dimmer,
-  Form,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  Item,
-  Label,
-  Loader,
-  Message,
-  Segment,
-  Select,
-  Divider
-} from "semantic-ui-react";
+import { Button, Card, Container, Dimmer, Form, Grid, Header, Icon, Image, Item, Label, Loader, Message, Segment, Select, Divider } from "semantic-ui-react";
 import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import 'react-slideshow-image/dist/styles.css';
+import './style.css'
 
 class ProductDetail extends React.Component {
   state = {
@@ -101,7 +85,7 @@ class ProductDetail extends React.Component {
       transitionDuration: 1111,
       indicators: true,
       arrows: true
-  };
+    };
     return (
       <Container>
         {error && (
@@ -125,7 +109,7 @@ class ProductDetail extends React.Component {
               <Card
                 fluid
                 image={
-                  <div>
+                  <div >
                     <Slide {...properties} >
                       <div className="each-slide">
                         <Item.Image src={item.image} />
@@ -138,13 +122,6 @@ class ProductDetail extends React.Component {
                       </div>
                     </Slide>
                   </div>
-                        <Item.Image src= {item.image1} />
-                      </div>
-                      <div className="each-slide">
-                        <Item.Image src= {item.image2} />
-                      </div>
-                    </Slide>
-                  </div> 
                 }
                 header={item.title}
                 meta={
@@ -261,3 +238,21 @@ export default withRouter(
     mapDispatchToProps
   )(ProductDetail)
 );
+
+
+
+// image={
+//   <div>
+//     <Slide {...properties} >
+//       <div className="each-slide">
+//         <Item.Image src={item.image} />
+//       </div>
+//       <div className="each-slide">
+//         <Item.Image src={item.image1} />
+//       </div>
+//       <div className="each-slide">
+//         <Item.Image src={item.image2} />
+//       </div>
+//     </Slide>
+//   </div>
+// }

@@ -20,17 +20,14 @@ class CustomLayout extends React.Component {
   componentDidMount() {
     this.props.fetchCart();
   }
-
   render() {
     const { authenticated, cart, loading } = this.props;
     return (
       <div>
         <Menu inverted style={{ backgroundColor: '#6b5b95', height: '85px' }}>
-          <Container >
+          <Container style={{ padding: 0, margin: 0 }} >
             <Link to="/">
-
-              <Image src="http://127.0.0.1:8000/media/logo.png" style={{ height: '85px', width: '100px' }}></Image>
-
+              <Image src="https://res.cloudinary.com/imad2514/image/upload/v1608717062/img/logo_ledfkm.png" style={{ height: '85px', width: '100px' }}></Image>
             </Link>
             <Link to="/">
               <Menu.Item header style={{ margin: '20px' }}>RAWNAQ</Menu.Item>
@@ -104,11 +101,11 @@ class CustomLayout extends React.Component {
           vertical
           style={{ margin: "5em 0em 0em", padding: "5em 0em", backgroundColor: '#6b5b95' }}
         >
-          <Container textAlign="center">
+          <Container style={{ textAlign: 'center' }} >
             <Grid divided inverted stackable>
               <Grid.Column width={5}>
                 <Header inverted as="h4" content="About" />
-                <p>Rawnaq.com is a  clothes online stores website which allow you to choose  requirement and buy it online</p>
+                <p>Rawnaq.com is a clothes online stores website which allow you to choose requirement and buy it online</p>
               </Grid.Column>
               <Grid.Column width={5}>
                 <Header inverted as="h4" content="Contact Us" />
@@ -116,7 +113,6 @@ class CustomLayout extends React.Component {
                   <List.Item >321-654-8977</List.Item>
                   <List.Item >Palestine</List.Item>
                   <List.Item >123 street South</List.Item>
-                  {/* <List.Item ></List.Item> */}
                 </List>
               </Grid.Column>
               <Grid.Column width={5}>
@@ -128,30 +124,14 @@ class CustomLayout extends React.Component {
                   <List.Item >Sufyan</List.Item>
                 </List>
               </Grid.Column>
-              <Grid.Column width={8} textAlign={"center"}>
-                <Header inverted as="h4" />
-                <p>
-                  &copy;{new Date().getFullYear()} Rawnaq.com|All right reserved by <a href="/">Rawnaq.</a>|<a href="/"> Terms Of Service</a>|<a href="/"> Privacy</a>
-                </p>
-              </Grid.Column>
             </Grid>
-
-            {/* <Divider inverted section />
-            <Image centered size="mini" src="/logo.png" />
-            <List horizontal inverted divided link size="small">
-              <List.Item as="a" href="#">
-                Site Map
-              </List.Item>
-              <List.Item as="a" href="#">
-                Contact Us
-              </List.Item>
-              <List.Item as="a" href="#">
-                Terms and Conditions
-              </List.Item>
-              <List.Item as="a" href="#">
-                Privacy Policy
-              </List.Item> */}
-            {/* </List> */}
+            <Grid divided inverted stackable></Grid>
+            <Grid.Column style={{ textAlign: 'center' }} >
+              <Header inverted as="h4" />
+              <p>
+                &copy;{new Date().getFullYear()} Rawnaq.com|All right reserved by <a href="/">Rawnaq.</a>|<a href="/"> Terms Of Service</a>|<a href="/"> Privacy</a>
+              </p>
+            </Grid.Column>
           </Container>
         </Segment>
       </div>

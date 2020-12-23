@@ -1,19 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-  Container,
-  Dimmer,
-  Image,
-  Item,
-  Label,
-  Loader,
-  Message,
-  Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment, Divider } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+import "./style.css"
 
 class cProductList extends React.Component {
   state = {
@@ -58,6 +50,7 @@ class cProductList extends React.Component {
   render() {
     const { data, error, loading } = this.state;
     return (
+
       <Container>
         {error && (
           <Message
@@ -71,11 +64,10 @@ class cProductList extends React.Component {
             <Dimmer active inverted>
               <Loader inverted>Loading</Loader>
             </Dimmer>
-
             <Image src="/images/wireframe/short-paragraph.png" />
           </Segment>
         )}
-        <Item.Group divided>
+        <Item.Group className='wrapper'>
           {data.map(item => {
             return (
               <Item key={item.id}>

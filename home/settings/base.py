@@ -6,6 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(
 SECRET_KEY = '-05sgp9!deq=q1nltm@^^2cc+v29i(tyybv3v2t77qi66czazj'
 DEBUG = True
 ALLOWED_HOSTS = []
+# ALLOWED_HOSTS += ['127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -24,9 +25,15 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'rest_framework',
     'rest_framework.authtoken',
-
+    # 'uploads.apps.UploadsConfig',
+    'cloudinary_storage',
+    'cloudinary',
+    # 'media',
     'core'
 ]
+
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -63,9 +70,22 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
-
+ 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'imad2514',
+    'API_KEY': '988173984452773',
+    'API_SECRET': '7oyOxT3qv1tmtFh8g77vVjk4mXM',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
+
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
