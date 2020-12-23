@@ -4,8 +4,8 @@ from django.db import models
 from django.db.models import Sum
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
-
-
+import cloudinary
+from cloudinary.forms import CloudinaryJsFileField
 CATEGORY_CHOICES = (
     ('Child', 'Child'),
     ('Men', 'Men'),
@@ -46,8 +46,10 @@ class Item(models.Model):
     label = models.CharField(choices=LABEL_CHOICES, max_length=20)
     slug = models.SlugField()
     description = models.TextField()
-    image = models.ImageField()
-    
+    image = models.ImageField(upload_to='images/',blank=True)
+    image1 = models.ImageField(default= "01.png")
+    image2 = models.ImageField(default= "01.png")
+
 
     def __str__(self):
         return self.title
