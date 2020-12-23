@@ -4,6 +4,7 @@
     gap: 10px;
   }
 
+
 .cinema{
   text-decoration: line-through
 }
@@ -13,3 +14,19 @@
     /* border: inset !important; */
     
 }
+
+  .each-slide > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  slide-container {
+    width: 70%;
+    margin: auto; }
+  
+
+  
+

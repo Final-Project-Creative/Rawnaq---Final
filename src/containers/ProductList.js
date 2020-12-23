@@ -1,16 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-  Container,
-  Dimmer,
-  Image,
-  Item,
-  Label,
-  Loader,
-  Message,
-  Segment
-} from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
@@ -22,6 +12,10 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
+import { productListURL, addToCartURL } from "../constants";
+import { fetchCart } from "../store/actions/cart";
+import { authAxios } from "../utils";
 import "./style.css"
 
 class ProductList extends React.Component {

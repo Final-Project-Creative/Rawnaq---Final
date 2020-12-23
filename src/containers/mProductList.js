@@ -1,19 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-    Container,
-    Dimmer,
-    Image,
-    Item,
-    Label,
-    Loader,
-    Message,
-    Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -23,7 +15,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import "./style.css"
-
 
 
 class mProductList extends React.Component {
@@ -89,6 +80,7 @@ class mProductList extends React.Component {
                 <Item.Group className='wrapper'>
                     {data.map(item => {
                         return (
+
                             <Card className='kkk'>
                                 <CardActionArea>
 
@@ -117,6 +109,50 @@ class mProductList extends React.Component {
 
                                 </CardActions>
                             </Card>
+
+
+                            <Item key={item.id}>
+                                <Item.Image src={item.image} />
+                                <Item.Content>
+                                    <Item.Header
+                                        as="a"
+                                        onClick={() =>
+                                            this.props.history.push(`/products/${item.id}`)
+                                        }
+                                    >
+                                        {item.title}
+                                    </Item.Header>
+                                    <Item.Meta>
+                                        <span className="cinema">{item.category}</span>
+                                    </Item.Meta>
+                                    <Item.Description>{item.description}</Item.Description>
+                                    <Item.Extra>
+                                        {/* <Button
+                      primary
+                      floated="right"
+                      icon
+                      labelPosition="right"
+                      onClick={() => this.handleAddToCart(item.slug)}
+                    >
+                      Add to cart
+                      <Icon name="cart plus" />
+                    </Button> */}
+                                        {item.discount_price && (
+                                            <Label
+                                                color={
+                                                    item.label === "primary"
+                                                        ? "blue"
+                                                        : item.label === "secondary"
+                                                            ? "blue"
+                                                            : "blue"
+                                                }
+                                            >
+                                                {item.label}
+                                            </Label>
+                                        )}
+                                    </Item.Extra>
+                                </Item.Content>
+                            </Item>
 
                         );
                     })}
