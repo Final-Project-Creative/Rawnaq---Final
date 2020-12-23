@@ -120,7 +120,7 @@ class ProductDetail extends React.Component {
                         <Item.Image src={item.image1} />
                       </div>
                       <div className="each-slide">
-                        <Item.Image src={item.image2} />
+                        <Item.Image src={item.image2} />>
                       </div>
                     </Slide>
                   </div>
@@ -194,7 +194,7 @@ class ProductDetail extends React.Component {
               )}
             </Grid.Column>
             <Grid.Column>
-              <Header as="h2">Try different variations</Header>
+              {/* <Header as="h2">Try different variations</Header> */}
               {data.variations &&
                 data.variations.map(v => {
                   return (

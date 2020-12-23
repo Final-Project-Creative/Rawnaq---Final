@@ -81,41 +81,36 @@ class aProductList extends React.Component {
                 <Item.Group className='wrapper'>
                     {data.map(item => {
                         return (
-                            <Item key={item.id}>
-                                <Item.Image src={item.image} />
-                                <Item.Content>
+                            <Card className='kkk'>
+                                <CardActionArea>
 
-                                    <Item.Meta className='inner'>
-                                        <Item.Header
+
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2"
                                             as="a"
                                             onClick={() =>
                                                 this.props.history.push(`/products/${item.id}`)
                                             }
+
                                         >
+                                            <Image src={item.image} />
                                             {item.title}
-                                        </Item.Header>
-                                        <Item.Meta>
-                                            <span className="cinema">{item.category}</span>
-                                        </Item.Meta>
-                                        <Item.Description>{item.description}</Item.Description>
-                                        <Item.Extra>
-                                            {item.discount_price && (
-                                                <Label
-                                                    color={
-                                                        item.label === "primary"
-                                                            ? "blue"
-                                                            : item.label === "secondary"
-                                                                ? "blue"
-                                                                : "blue"
-                                                    }
-                                                >
-                                                    {item.label}
-                                                </Label>
-                                            )}
-                                        </Item.Extra>
-                                    </Item.Meta>
-                                </Item.Content>
-                            </Item>
+                                        </Typography>
+                                        <Typography variant="body2" color="black" component="p">
+
+                                            <span className="cinema"> ${item.price}</span>   <span className="cinema2">${item.discount_price}</span>
+                                            <br></br>
+                                            <br></br>
+                                            {/* {item.description} */}
+
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+
+                                </CardActions>
+                            </Card>
+
                         );
                     })}
                 </Item.Group>
