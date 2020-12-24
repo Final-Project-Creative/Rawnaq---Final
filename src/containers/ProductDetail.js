@@ -104,23 +104,29 @@ class ProductDetail extends React.Component {
           </Segment>
         )}
         <Grid columns={2} divided>
-          <Grid.Row>
-            <Grid.Column>
+          <Grid.Row className="row">
+            <div className="col-lg-3">
+
+            </div>
+            <Grid.Column className="col-lg-6">
               <Card
                 fluid
                 image={
-                  <div >
-                    <Slide {...properties} >
-                      <div className="each-slide">
-                        <Item.Image src={item.image} />
+                  <div className="ui slide masked reveal image">
+
+                    <Slide {...properties}  >
+                      <div className="img">
+                        <Item.Image src={item.image}  />
+
                       </div>
-                      <div className="each-slide">
+                      <div className="img">
                         <Item.Image src={item.image1} />
                       </div>
-                      <div className="each-slide">
+                      <div className="img">
                         <Item.Image src={item.image2} />
                       </div>
                     </Slide>
+
                   </div>
                 }
                 header={item.title}
@@ -191,8 +197,11 @@ class ProductDetail extends React.Component {
                 </React.Fragment>
               )}
             </Grid.Column>
+            <div className="col-lg-3">
+
+            </div>
             <Grid.Column>
-              <Header as="h2">Try different variations</Header>
+              {/* <Header as="h2">Try different variations</Header> */}
               {data.variations &&
                 data.variations.map(v => {
                   return (
