@@ -23,6 +23,18 @@
     
 }
 
+
+.imgg{
+  width: 20%; 
+  height: 20%;
+
+} */
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
+}
+
   .each-slide > div {
     display: flex;
     align-items: center;

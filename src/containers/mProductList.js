@@ -100,7 +100,8 @@ class mProductList extends React.Component {
 
                                             <span className="cinema"> ${item.price}</span>   <span className="cinema2">${item.discount_price}</span>
                                             <br></br>
-                                            {item.label}
+                                            <br></br>
+                                            {/* {item.description} */}
 
                                         </Typography>
                                     </CardContent>

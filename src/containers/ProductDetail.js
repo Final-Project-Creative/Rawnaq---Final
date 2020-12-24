@@ -120,7 +120,7 @@ class ProductDetail extends React.Component {
                         <Item.Image src={item.image1} />
                       </div>
                       <div className="each-slide">
-                        <Item.Image src={item.image2} />>
+                        <Item.Image src={item.image2} />
                       </div>
                     </Slide>
                   </div>
