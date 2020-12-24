@@ -1,19 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-    Container,
-    Dimmer,
-    Image,
-    Item,
-    Label,
-    Loader,
-    Message,
-    Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -23,7 +15,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import "./style.css"
-
 
 
 class mProductList extends React.Component {
@@ -108,7 +99,8 @@ class mProductList extends React.Component {
 
                                             <span className="cinema"> ${item.price}</span>   <span className="cinema2">${item.discount_price}</span>
                                             <br></br>
-                                            {item.label}
+                                            <br></br>
+                                            {/* {item.description} */}
 
                                         </Typography>
                                     </CardContent>
