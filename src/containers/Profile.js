@@ -247,7 +247,7 @@ class AddressForm extends React.Component {
         {error && (
           <Message
             error
-            header="There was an error"
+          // header="There was an error"
           // content={JSON.stringify(error)}
           />
         )}
@@ -437,7 +437,7 @@ class Profile extends React.Component {
             {error && (
               <Message
                 error
-                header="There was an error"
+              // header="There was an error"
               // content={JSON.stringify(error)}
               />
             )}

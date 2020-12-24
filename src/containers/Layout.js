@@ -24,7 +24,7 @@ class CustomLayout extends React.Component {
     const { authenticated, cart, loading } = this.props;
     return (
       <div>
-        <Menu inverted style={{ backgroundColor: '#6b5b95', height: '85px' }}>
+        <Menu inverted style={{ backgroundColor: '#6b5b95', height: '85px', margin: '0' }}>
           <Container style={{ padding: 0, margin: 0 }} >
             <Link to="/">
               <Image src="https://res.cloudinary.com/imad2514/image/upload/v1608717062/img/logo_ledfkm.png" style={{ height: '85px', width: '100px' }}></Image>
@@ -32,7 +32,7 @@ class CustomLayout extends React.Component {
             <Link to="/">
               <Menu.Item header style={{ margin: '20px' }}>RAWNAQ</Menu.Item>
             </Link>
-            <Link to="/products">
+            <Link to="/childproducts">
               <Menu.Item header style={{ margin: '20px' }}>Products</Menu.Item>
             </Link>
             {authenticated ? (
@@ -160,3 +160,11 @@ export default withRouter(
     mapDispatchToProps
   )(CustomLayout)
 );
+
+
+// <Dropdown.Menu>
+//   <Dropdown.Item text='<a href="/womenproducts">WOMEN</a>'/>
+//   <Dropdown.Item text='MEN' />
+//   <Dropdown.Item text='CHILDREN' />
+//   <Dropdown.Item text='ACCESSORIES' />
+// </Dropdown.Menu>
