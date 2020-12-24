@@ -2,29 +2,15 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-  Button,
-  Card,
-  Container,
-  Dimmer,
-  Form,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  Item,
-  Label,
-  Loader,
-  Message,
-  Segment,
-  Select,
-  Divider
-} from "semantic-ui-react";
+import { Button, Card, Container, Dimmer, Form, Grid, Header, Icon, Image, Item, Label, Loader, Message, Segment, Select, Divider } from "semantic-ui-react";
 import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+import "./style.css"
+
+
 
 class ProductDetail extends React.Component {
   state = {
@@ -120,23 +106,29 @@ class ProductDetail extends React.Component {
           </Segment>
         )}
         <Grid columns={2} divided>
-          <Grid.Row>
-            <Grid.Column>
+          <Grid.Row className="row">
+            <div className="col-lg-3">
+
+            </div>
+            <Grid.Column className="col-lg-6">
               <Card
                 fluid
                 image={
-                  <div>
-                    <Slide {...properties} >
-                      <div className="each-slide">
-                        <Item.Image src={item.image} />
+                  <div className="ui slide masked reveal image">
+
+                    <Slide {...properties}  >
+                      <div className="img">
+                        <Item.Image src={item.image}  />
+
                       </div>
-                      <div className="each-slide">
+                      <div className="img">
                         <Item.Image src={item.image1} />
                       </div>
-                      <div className="each-slide">
+                      <div className="img">
                         <Item.Image src={item.image2} />
                       </div>
                     </Slide>
+
                   </div>
                 }
                 header={item.title}
@@ -148,10 +140,10 @@ class ProductDetail extends React.Component {
                       <Label
                         color={
                           item.label === "primary"
-                            ? "blue"
+                            ? "#6b5b95"
                             : item.label === "secondary"
-                              ? "blue"
-                              : "blue"
+                              ? "#6b5b95"
+                              : "#6b5b95"
                         }
                       >
                         {item.label}
@@ -164,7 +156,7 @@ class ProductDetail extends React.Component {
                   <React.Fragment>
                     <Button
                       fluid
-                      color="blue"
+                      color="#6b5b95"
                       floated="right"
                       icon
                       labelPosition="right"
@@ -202,13 +194,16 @@ class ProductDetail extends React.Component {
                         </Form.Field>
                       );
                     })}
-                    <Form.Button primary>Add</Form.Button>
+                    <Form.Button color='#6b5b95'>Add</Form.Button>
                   </Form>
                 </React.Fragment>
               )}
             </Grid.Column>
+            <div className="col-lg-3">
+
+            </div>
             <Grid.Column>
-              <Header as="h2">Try different variations</Header>
+              {/* <Header as="h2">Try different variations</Header> */}
               {data.variations &&
                 data.variations.map(v => {
                   return (
@@ -254,3 +249,5 @@ export default withRouter(
     mapDispatchToProps
   )(ProductDetail)
 );
+
+

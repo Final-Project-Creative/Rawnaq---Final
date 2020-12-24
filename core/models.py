@@ -4,8 +4,9 @@ from django.db import models
 from django.db.models import Sum
 from django.shortcuts import reverse
 from django_countries.fields import CountryField
-
-
+from multiselectfield import MultiSelectField
+import cloudinary
+from cloudinary.forms import CloudinaryJsFileField
 CATEGORY_CHOICES = (
     ('Child', 'Child'),
     ('Men', 'Men'),
@@ -43,10 +44,13 @@ class Item(models.Model):
     price = models.FloatField()
     discount_price = models.FloatField(blank=True, null=True)
     category = models.CharField(choices=CATEGORY_CHOICES, max_length=20)
-    label = models.CharField(choices=LABEL_CHOICES, max_length=20)
+    label = MultiSelectField(choices=LABEL_CHOICES,
+                                 max_choices=4,
+                                 max_length=20)
+    # label = models.CharField(choices=LABEL_CHOICES, max_length=20)
     slug = models.SlugField()
     description = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images/',blank=True)
     image1 = models.ImageField(default= "01.png")
     image2 = models.ImageField(default= "01.png")
 
