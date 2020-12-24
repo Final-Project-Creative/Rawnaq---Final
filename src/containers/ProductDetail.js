@@ -7,8 +7,10 @@ import { productDetailURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
 import { Slide } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
-import './style.css'
+import 'react-slideshow-image/dist/styles.css'
+import "./style.css"
+
+
 
 class ProductDetail extends React.Component {
   state = {
@@ -138,10 +140,10 @@ class ProductDetail extends React.Component {
                       <Label
                         color={
                           item.label === "primary"
-                            ? "blue"
+                            ? "#6b5b95"
                             : item.label === "secondary"
-                              ? "blue"
-                              : "blue"
+                              ? "#6b5b95"
+                              : "#6b5b95"
                         }
                       >
                         {item.label}
@@ -154,7 +156,7 @@ class ProductDetail extends React.Component {
                   <React.Fragment>
                     <Button
                       fluid
-                      color="blue"
+                      color="#6b5b95"
                       floated="right"
                       icon
                       labelPosition="right"
@@ -192,7 +194,7 @@ class ProductDetail extends React.Component {
                         </Form.Field>
                       );
                     })}
-                    <Form.Button primary>Add</Form.Button>
+                    <Form.Button color='#6b5b95'>Add</Form.Button>
                   </Form>
                 </React.Fragment>
               )}
@@ -249,19 +251,3 @@ export default withRouter(
 );
 
 
-
-// image={
-//   <div>
-//     <Slide {...properties} >
-//       <div className="each-slide">
-//         <Item.Image src={item.image} />
-//       </div>
-//       <div className="each-slide">
-//         <Item.Image src={item.image1} />
-//       </div>
-//       <div className="each-slide">
-//         <Item.Image src={item.image2} />
-//       </div>
-//     </Slide>
-//   </div>
-// }

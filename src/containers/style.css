@@ -4,6 +4,37 @@
     gap: 10px;
   }
 
+
+.cinema{
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+
+.cinema2{
+  font-size: large;
+  font-weight: bold;
+}
+
+
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
+}
+
+
+.imgg{
+  width: 20%; 
+  height: 20%;
+
+} */
+.oneitem{
+  box-sizing: border-box;
+    /* border: inset !important; */
+    
+}
+
   .each-slide > div {
     display: flex;
     align-items: center;
@@ -19,6 +50,4 @@
   slide-container {
     width: 70%;
     margin: auto; }
-  
-
   

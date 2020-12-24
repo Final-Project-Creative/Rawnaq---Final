@@ -173,11 +173,6 @@ class OrderSummary extends React.Component {
                       />
                     </Table.Cell>
                     <Table.Cell>
-                      {orderItem.item.discount_price && (
-                        <Label color="green" ribbon>
-                          ON DISCOUNT
-                        </Label>
-                      )}
                       ${orderItem.final_price}
                       <Icon
                         name="trash"
@@ -203,7 +198,7 @@ class OrderSummary extends React.Component {
               <Table.Row>
                 <Table.HeaderCell colSpan="5">
                   <Link to="/checkout">
-                    <Button floated="right" color="yellow">
+                    <Button floated="right" color="#6b5b95">
                       Checkout
                     </Button>
                   </Link>
