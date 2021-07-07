@@ -41,7 +41,7 @@ const OrderPreview = props => {
                 <Item key={i}>
                   <Item.Image
                     size="tiny"
-                    src={`http://127.0.0.1:8000${orderItem.item.image}`}
+                    src={`${orderItem.item.image}`}
                   />
                   <Item.Content verticalAlign="middle">
                     <Item.Header as="a">
@@ -59,15 +59,15 @@ const OrderPreview = props => {
           <Item.Group>
             <Item>
               <Item.Content>
-                <Item.Header>
+                {/* <Item.Header> */}
                   Order Total: ${data.total}
-                  {data.coupon && (
+                {/* {data.coupon && (
                     <Label color="green" style={{ marginLeft: "10px" }}>
                       Current coupon: {data.coupon.code} for $
                       {data.coupon.amount}
                     </Label>
-                  )}
-                </Item.Header>
+                  )} */}
+                {/* </Item.Header> */}
               </Item.Content>
             </Item>
           </Item.Group>
@@ -88,17 +88,17 @@ class CouponForm extends Component {
     });
   };
 
-  handleSubmit = e => {
-    const { code } = this.state;
-    this.props.handleAddCoupon(e, code);
-    this.setState({ code: "" });
-  };
+  // handleSubmit = e => {
+  //   const { code } = this.state;
+  //   this.props.handleAddCoupon(e, code);
+  //   this.setState({ code: "" });
+  // };
 
   render() {
     const { code } = this.state;
     return (
       <React.Fragment>
-        <Form onSubmit={this.handleSubmit}>
+        {/* <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label>Coupon code</label>
             <input
@@ -108,7 +108,7 @@ class CouponForm extends Component {
             />
           </Form.Field>
           <Button type="submit">Submit</Button>
-        </Form>
+        </Form> */}
       </React.Fragment>
     );
   }
@@ -121,14 +121,14 @@ class CheckoutForm extends Component {
     error: null,
     success: false,
     shippingAddresses: [],
-    billingAddresses: [],
-    selectedBillingAddress: "",
+    // billingAddresses: [],
+    // selectedBillingAddress: "",
     selectedShippingAddress: ""
   };
 
   componentDidMount() {
     this.handleFetchOrder();
-    this.handleFetchBillingAddresses();
+    // this.handleFetchBillingAddresses();
     this.handleFetchShippingAddresses();
   }
 
@@ -140,27 +140,27 @@ class CheckoutForm extends Component {
     return "";
   };
 
-  handleFetchBillingAddresses = () => {
-    this.setState({ loading: true });
-    authAxios
-      .get(addressListURL("B"))
-      .then(res => {
-        this.setState({
-          billingAddresses: res.data.map(a => {
-            return {
-              key: a.id,
-              text: `${a.street_address}, ${a.apartment_address}, ${a.country}`,
-              value: a.id
-            };
-          }),
-          selectedBillingAddress: this.handleGetDefaultAddress(res.data),
-          loading: false
-        });
-      })
-      .catch(err => {
-        this.setState({ error: err, loading: false });
-      });
-  };
+  // handleFetchBillingAddresses = () => {
+  //   this.setState({ loading: true });
+  //   authAxios
+  //     .get(addressListURL("B"))
+  //     .then(res => {
+  //       this.setState({
+  //         billingAddresses: res.data.map(a => {
+  //           return {
+  //             key: a.id,
+  //             text: `${a.street_address}, ${a.apartment_address}, ${a.country}`,
+  //             value: a.id
+  //           };
+  //         }),
+  //         selectedBillingAddress: this.handleGetDefaultAddress(res.data),
+  //         loading: false
+  //       });
+  //     })
+  //     .catch(err => {
+  //       this.setState({ error: err, loading: false });
+  //     });
+  // };
 
   handleFetchShippingAddresses = () => {
     this.setState({ loading: true });
@@ -256,7 +256,7 @@ class CheckoutForm extends Component {
       error,
       loading,
       success,
-      billingAddresses,
+      // billingAddresses,
       shippingAddresses,
       selectedBillingAddress,
       selectedShippingAddress
@@ -286,7 +286,7 @@ class CheckoutForm extends Component {
           handleAddCoupon={(e, code) => this.handleAddCoupon(e, code)}
         />
         <Divider />
-        <Header>Select a billing address</Header>
+        {/* <Header>Select a billing address</Header>
         {billingAddresses.length > 0 ? (
           <Select
             name="selectedBillingAddress"
@@ -300,7 +300,7 @@ class CheckoutForm extends Component {
             <p>
               You need to <Link to="/profile">add a billing address</Link>
             </p>
-          )}
+          )} */}
         <Header>Select a shipping address</Header>
         {shippingAddresses.length > 0 ? (
           <Select
@@ -318,7 +318,7 @@ class CheckoutForm extends Component {
           )}
         <Divider />
 
-        {billingAddresses.length < 1 || shippingAddresses.length < 1 ? (
+        {shippingAddresses.length < 1 ? (
           <p>You need to add addresses before you can complete your purchase</p>
         ) : (
             <React.Fragment>
@@ -352,7 +352,8 @@ const InjectedForm = withRouter(injectStripe(CheckoutForm));
 
 const WrappedForm = () => (
   <Container text>
-    <StripeProvider apiKey="">
+    <StripeProvider apiKey="pk_test_TYooMQauvdEDq54NiTphI7jx">
+      {/* <StripeProvider stripe={this.state.stripe}> */}
       <div>
         <h1>Complete your order</h1>
         <Elements>

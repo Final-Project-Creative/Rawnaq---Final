@@ -1,27 +1,25 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import {
-    Container,
-    Dimmer,
-    Image,
-    Item,
-    Label,
-    Loader,
-    Message,
-    Segment
-} from "semantic-ui-react";
+import { Container, Dimmer, Image, Item, Label, Loader, Message, Segment } from "semantic-ui-react";
 import { productListURL, addToCartURL } from "../constants";
 import { fetchCart } from "../store/actions/cart";
 import { authAxios } from "../utils";
-
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import "./style.css"
 class mProductList extends React.Component {
     state = {
         loading: false,
         error: null,
         data: []
     };
-
     componentDidMount() {
         this.setState({ loading: true });
         axios
@@ -30,18 +28,14 @@ class mProductList extends React.Component {
                 this.setState({
                     data: res.data.filter((data) =>
                         data.category === 'Men')
-
                     , loading: false
                 });
                 console.log(res.data)
-
-
             })
             .catch(err => {
                 this.setState({ error: err, loading: false });
             });
     }
-
     handleAddToCart = slug => {
         this.setState({ loading: true });
         authAxios
@@ -54,7 +48,6 @@ class mProductList extends React.Component {
                 this.setState({ error: err, loading: false });
             });
     };
-
     render() {
         const { data, error, loading } = this.state;
         return (
@@ -71,55 +64,35 @@ class mProductList extends React.Component {
                         <Dimmer active inverted>
                             <Loader inverted>Loading</Loader>
                         </Dimmer>
-
                         <Image src="/images/wireframe/short-paragraph.png" />
                     </Segment>
                 )}
-                <Item.Group divided>
+                <Item.Group className='wrapper'>
                     {data.map(item => {
                         return (
-                            <Item key={item.id}>
-                                <Item.Image src={item.image} />
-                                <Item.Content>
-                                    <Item.Header
-                                        as="a"
-                                        onClick={() =>
-                                            this.props.history.push(`/products/${item.id}`)
-                                        }
-                                    >
-                                        {item.title}
-                                    </Item.Header>
-                                    <Item.Meta>
-                                        <span className="cinema">{item.category}</span>
-                                    </Item.Meta>
-                                    <Item.Description>{item.description}</Item.Description>
-                                    <Item.Extra>
-                                        {/* <Button
-                      primary
-                      floated="right"
-                      icon
-                      labelPosition="right"
-                      onClick={() => this.handleAddToCart(item.slug)}
-                    >
-                      Add to cart
-                      <Icon name="cart plus" />
-                    </Button> */}
-                                        {item.discount_price && (
-                                            <Label
-                                                color={
-                                                    item.label === "primary"
-                                                        ? "blue"
-                                                        : item.label === "secondary"
-                                                            ? "blue"
-                                                            : "blue"
-                                                }
-                                            >
-                                                {item.label}
-                                            </Label>
-                                        )}
-                                    </Item.Extra>
-                                </Item.Content>
-                            </Item>
+                            <Card className='kkk'>
+                                <CardActionArea>
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="h2"
+                                            as="a"
+                                            onClick={() =>
+                                                this.props.history.push(`/products/${item.id}`)
+                                            }
+                                        >
+                                            <Image src={item.image} />
+                                            {item.title}
+                                        </Typography>
+                                        <Typography variant="body2" color="black" component="p">
+                                            <span className="cinema"> ${item.price}</span>   <span className="cinema2">${item.discount_price}</span>
+                                            <br></br>
+                                            <br></br>
+                                            {/* {item.description} */}
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                </CardActions>
+                            </Card>
                         );
                     })}
                 </Item.Group>
@@ -127,13 +100,11 @@ class mProductList extends React.Component {
         );
     }
 }
-
 const mapDispatchToProps = dispatch => {
     return {
         refreshCart: () => dispatch(fetchCart())
     };
 };
-
 export default connect(
     null,
     mapDispatchToProps
